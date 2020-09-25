@@ -10,6 +10,10 @@ app.use(express.json());
 
 app.use('/', router);
 
+app.get('/', (req, res) => {
+    res.send('<h1>Running</h1>');
+});
+
 app.listen(3000, () => {
     console.log('Running')
 });
