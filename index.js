@@ -10,6 +10,6 @@ app.use(express.json());
 
 app.use('/', router);
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log('Running')
 });
