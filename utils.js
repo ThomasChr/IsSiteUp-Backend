@@ -1,4 +1,6 @@
 const dns = require('dns');
+const screenshot = require("node-server-screenshot");
+const path = require('path');
 
 exports.extractHostname = function(url) {
     var hostname;
@@ -23,4 +25,17 @@ exports.lookupPromise = async function(url){
             resolve(address);
         });
    });
+};
+
+exports.getScreenshot = async function(domain, ssl){
+    return new Promise((resolve) => {
+        screenshot.fromURL(`${ssl ? 'https://' : 'http://'}${domain}`, path.join(__dirname, 'screenshots', `${domain}.png`), (err) => {
+            if(!err){
+                resolve(`/screenshots/${domain}.png`);
+            }else{
+                console.log(err)
+                resolve(null);
+            }
+        });
+    });
 };
