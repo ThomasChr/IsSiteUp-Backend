@@ -1,9 +1,9 @@
 # Is This Site Up Server
 
-this is an open-source node.js server to test is site is up or not providing the domain name.
+this is an open-source node.js server to test id a site is up or not providing the domain name.
 
 ## EndPoints
-this server has one endpoint that receives a POST request to *serverIP:PORT/* in json format
+this server has one endpoint at "/" that receives a POST request in json format
 
 ### Request content
 ```JSON
