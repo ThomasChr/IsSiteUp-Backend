@@ -2,6 +2,9 @@
 
 this is an open-source node.js server to test if a site is up or not providing the domain name.
 
+## Starting
+the server expects an environment variable named "PORT" which will hold the port the server will listen on
+
 ## EndPoints
 this server has one endpoint at "/" that receives a POST request in json format
 
