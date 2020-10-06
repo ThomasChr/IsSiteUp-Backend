@@ -11,11 +11,11 @@ router.post('/', async (req, res) => {
 
     const domain = psl.parse(utils.extractHostname(site)).domain;
 
-    var results;
-    var responseCode;
-    var ipAddr;
-    var responseTime;
-    var screenshotURL;
+    let results;
+    let responseCode;
+    let ipAddr;
+    let responseTime;
+    let screenshotURL;
 
     try {
         const start = new Date();

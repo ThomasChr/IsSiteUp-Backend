@@ -3,7 +3,7 @@ const screenshot = require("node-server-screenshot");
 const path = require('path');
 
 exports.extractHostname = function(url) {
-    var hostname;
+    let hostname;
 
     if (url.indexOf("//") > -1) {
         hostname = url.split('/')[2];
